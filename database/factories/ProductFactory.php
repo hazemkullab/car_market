@@ -24,6 +24,7 @@ class ProductFactory extends Factory
             'excerpt'=>json_encode(['en'=> $this->faker->sentence(20,true) ,'ar'=>$this->faker->sentence(20,true)],JSON_UNESCAPED_UNICODE),
             'content'=>json_encode(['en'=> $this->faker->paragraph(5,true) ,'ar'=>$this->faker->paragraph(5,true)],JSON_UNESCAPED_UNICODE),
             'slug'=> Str::slug($this->faker->words(2,true)),
+            'price' => rand(20,200),
             'discount' => rand(0,20),
 
         ];
