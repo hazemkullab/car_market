@@ -14,9 +14,9 @@
                 <div class="col-md-12 col-lg-8" >
                     <div class="banner-content center-heading">
 
-                        <span class="subheading">Expert Dentist</span>
+                        <span class="subheading">Expert Cars</span>
                         <h1>Build Skills With Experts Any Time, Anywhere </h1>
-                        <p>We invest in personnel, technological innovations and infrastructure and have established
+                        <p>We invest in Cars, technological innovations and infrastructure and have established
                             regional and international offices.</p>
                         <a href="{{ route('website.dealers') }}" class="btn btn-main"><i class="fa fa-list-ul mr-2"></i>Our Dealers </a>
                     </div>

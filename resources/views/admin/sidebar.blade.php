@@ -4,9 +4,10 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('website.index') }}">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-tooth"></i>
+            <i class="fas fa-car"></i>
+            <div class="sidebar-brand-text mx-3"> CM </div>
         </div>
-        <div class="sidebar-brand-text mx-3"> Dental Market </div>
+        <div class="sidebar-brand-text mx-3"> cars Dashboard </div>
     </a>
 
     <!-- Divider -->
@@ -60,12 +61,12 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true"
                     aria-controls="collapseProducts">
                     <i class="fas fa-fw fa-arrow-right"></i>
-                    <span>Cars</span>
+                    <span>products</span>
                 </a>
                 <div id="collapseProducts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Cars:</h6>
-                        <a class="collapse-item" href="{{ route('admin.products.index') }}">All Cars</a>
+                        <h6 class="collapse-header">Custom products:</h6>
+                        <a class="collapse-item" href="{{ route('admin.products.index') }}">All products</a>
                         <a class="collapse-item" href="{{ route('admin.products.create') }}">Add New</a>
                         <a class="collapse-item" href="{{ route('admin.products.trash') }}">Trash</a>
                     </div>

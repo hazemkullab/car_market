@@ -71,13 +71,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <p> All Cars </p>
+                    <p> All products </p>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="topbar-search">
                         <form method="get" action="#">
-                            <input type="text" placeholder="Search our Cars" class="form-control">
+                            <input type="text" placeholder="Search our products" class="form-control">
                             <label><i class="fa fa-search"></i></label>
                         </form>
                     </div>

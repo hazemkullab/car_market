@@ -142,6 +142,24 @@
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Welcom, {{ Auth::user()->name }} <i class="fa fa-angle-down"></i>
                                     </a>
+                                    @if (Auth::user()->type == 'admin')
+                                    <div class="dropdown-menu" aria-labelledby="navbar3">
+                                        <a class="dropdown-item " href="{{ route('website.my_products') }}">
+                                            My Products
+                                        </a>
+                                        <a class="dropdown-item " href="{{ route('admin.categories.index') }}">
+                                            Dashboard
+                                        </a>
+                                        <a class="dropdown-item " href="#"
+                                            onclick="event.preventDefault ();document.getElementById('logout-form').submit()">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" class="d-none" action="{{ route('logout') }}"
+                                            method="POST">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                    @else
                                     <div class="dropdown-menu" aria-labelledby="navbar3">
                                         <a class="dropdown-item " href="{{ route('website.my_products') }}">
                                             My Products
@@ -155,6 +173,8 @@
                                             @csrf
                                         </form>
                                     </div>
+                                    @endif
+
                                 </li>
                             </ul>
                         @else
