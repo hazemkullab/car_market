@@ -35,6 +35,7 @@
                                         <th>English Name</th>
                                         <th>Arabic Name</th>
                                         <th>Category</th>
+                                        <th>Products Count</th>
                                         <th>Image</th>
                                         <th>Action</th>
                                     </thead>
