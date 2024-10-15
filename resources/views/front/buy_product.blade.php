@@ -29,9 +29,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <script src="https://eu-test.oppwa.com/v1/paymentWidgets.js?checkoutId={{ $checkoutId }}"></script>
-                        <form action="{{ route('website.buy_product_thanks',$product->id) }}" class="paymentWidgets" data-brands="VISA MASTER AMEX"></form>
-
+                        <script src="https://eu-test.oppwa.com/v1/paymentWidgets.js?checkoutId={{ $checkoutId }}"
+                            integrity="{{ $integrity }}" crossorigin="anonymous"></script>
+                            <form action="{{ route('website.buy_product_thanks',$product->id) }}" class="paymentWidgets" data-brands="VISA MASTER AMEX"></form>
 
                     </div>
                     <div class="col-md-5">
@@ -51,7 +51,8 @@
                                     <tr class="order-total">
                                         <th>Total</th>
                                         <td><strong><span class="woocommerce-Price-amount amount"><span
-                                                        class="woocommerce-Price-currencySymbol"></span></span> {{ $product->price }} $ </strong>
+                                                        class="woocommerce-Price-currencySymbol"></span></span>
+                                                {{ $product->price }} $ </strong>
                                         </td>
                                     </tr>
                                 </tfoot>
