@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center">
     <h1> All Categories </h1>
-    
+
     <a class="btn btn-outline-success" href="{{ route('admin.categories.create') }}">Add New Category</a>
 
 </div>

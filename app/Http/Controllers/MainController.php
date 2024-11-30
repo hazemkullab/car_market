@@ -141,10 +141,11 @@ class MainController extends Controller
             }
             curl_close($ch);
             $responseData = json_decode($responseData,true);
+            // dd($responseData);
             // return $responseData;
             $code = $responseData['result']['code'];
 
-            $valid = ['000.000.000','000.000.100','000.100.105','000.100.106','000.100.110','000.100.111','000.100.112','100.390.106'];
+            $valid = ['000.000.000','000.000.100','000.100.105','000.100.106','000.100.110','000.100.111','000.100.112','100.390.106','800.900.300'];
             if(in_array($code , $valid)){
 
                 //register product

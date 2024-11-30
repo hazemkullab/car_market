@@ -35,7 +35,6 @@
                                         <th>English Name</th>
                                         <th>Arabic Name</th>
                                         <th>Category</th>
-                                        <th>Products Count</th>
                                         <th>Image</th>
                                         <th>Action</th>
                                     </thead>
@@ -57,6 +56,7 @@
                                                 <td>{{ $dealer->en_name }}</td>
                                                 <td>{{ $dealer->ar_name }}</td>
                                                 <td>{{ $dealer->category ? $dealer->category->trans_name : '' }}</td>
+                                                <td>{{ $dealer->products>count()}}</td>
                                                 <td><img width="100" class="img-thumbnail" src="{{ asset(('uploads/'.$dealer->image)) }}"></td>
                                                 <td>
 
@@ -90,11 +90,6 @@
                                                 <td colspan="5" style="text-align:center">Theres no Dealers </td>
                                             </tr>
                                     @endforelse
-{{--
-                                        @foreach ($dealers as $dealer)
-
-                                    @endforeach
-                                             --}}
                                 </table>
                             </div>
                         </div>

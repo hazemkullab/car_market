@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class DealersController extends Controller
+class DealerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class DealersController extends Controller
     {
         $dealers = Dealer::latest()->get();
         $type ='index';
-        return response()->view('admin.dealers.index',compact('dealers','type'));
+        return view('admin.dealers.index',compact('dealers','type'));
 
     }
 

@@ -5,14 +5,14 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center">
     <h1> All Categories </h1>
-    
+
     <a class="btn btn-outline-success" href="{{ route('admin.categories.create') }}">Add New Category</a>
 
 </div>
 
      <div class="card shadow mb-4">
                         <div class="card-header d-flex justify-content-between align-items-center py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            {{-- <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6> --}}
                             <a class="btn btn-danger btn-sm" href="{{ route('admin.categories.trash') }}"><i class="fas fa-trash"></i> Trash</a>
                         </div>
                         <div class="card-body">

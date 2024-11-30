@@ -1,17 +1,16 @@
 <?php
 
-use App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MainController;
-// use App\Http\Controllers\Admin\DealerController;
-// use App\Http\Controllers\Admin\DealersController;
-use App\Http\Controllers\Admin\DealersController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\DashboardController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\DealersController;
+use App\Http\Controllers\Admin\DealerController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers;
 
 
 /*
@@ -38,10 +37,10 @@ Route::prefix('admin')->name('admin.')->middleware('auth','admin')->group(functi
     Route::resource('categories', CategoryController::class);
 
 // Dealers routes
-    Route::get('dealers/trash',[DealersController::class,'trash'])->name('dealers.trash');
-    Route::get('dealers/{id}/restore',[DealersController::class,'restore'])->name('dealers.restore');
-    Route::delete('dealers/{id}/forcedelete',[DealersController::class,'forcedelete'])->name('dealers.forceDelete');
-    Route::resource('dealers', DealersController::class);
+    Route::get('dealers/trash',[DealerController::class,'trash'])->name('dealers.trash');
+    Route::get('dealers/{id}/restore',[DealerController::class,'restore'])->name('dealers.restore');
+    Route::delete('dealers/{id}/forcedelete',[DealerController::class,'forcedelete'])->name('dealers.forceDelete');
+    Route::resource('dealers', DealerController::class);
 
 
     // Products routes
@@ -75,6 +74,7 @@ Route::get('/user/login',[MainController::class, 'login'])->name('website.login'
 });
 
 // Route::get('/', function () {
+
 //     return view('welcome');
 // })->name('website.index');
 
