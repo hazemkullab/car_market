@@ -30,10 +30,10 @@
         <div class="course-footer d-lg-flex align-items-center justify-content-between">
             <div class="course-meta">
                 {{-- <span class="course-student"><i class="bi bi-group"></i>340</span> --}}
-                <span class="course-duration"><i class="bi bi-badge3"></i>  {{ $dealer->products->count() }} products </span>
+                <span class="course-duration"><i class="bi bi-badge3"></i>  {{ $dealer->products->count() }} {{ __('web.products') }} </span>
             </div>
 
-            <div class="buy-btn"><a href="{{ route('website.dealers_single',$dealer->slug) }}" class="btn btn-main-2 btn-small">Details</a></div>
+            <div class="buy-btn"><a href="{{ route('website.dealers_single',$dealer->slug) }}" class="btn btn-main-2 btn-small">{{ __('web.Details') }}</a></div>
         </div>
     </div>
 </div>

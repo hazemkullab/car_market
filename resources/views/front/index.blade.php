@@ -14,11 +14,10 @@
                 <div class="col-md-12 col-lg-8" >
                     <div class="banner-content center-heading">
 
-                        <span class="subheading">Expert Cars</span>
-                        <h1>Build Skills With Experts Any Time, Anywhere </h1>
-                        <p>We invest in Cars, technological innovations and infrastructure and have established
-                            regional and international offices.</p>
-                        <a href="{{ route('website.dealers') }}" class="btn btn-main"><i class="fa fa-list-ul mr-2"></i>Our Dealers </a>
+                        <span class="subheading">{{ __('web.Expert Cars') }}</span>
+                        <h1>{{ __('web.Our products are the best on the market') }}</h1>
+                        <p>{{ __('web.We invest in Car parts, technological innovations and infrastructure and have established regional and international offices') }}.</p>
+                        <a href="{{ route('website.dealers') }}" class="btn btn-main"><i class="fa fa-list-ul mr-2"></i>{{ __('web.Our Dealers') }} </a>
                     </div>
                 </div>
             </div> <!-- / .row -->
@@ -37,7 +36,7 @@
                                 <i class="bi bi-laptop"></i>
                             </div> --}}
                             <h4>{{ $item->trans_name }}</h4>
-                            <p>{{ $item->dealers->count() }} Dealers</p>
+                            <p>{{ $item->dealers->count() }} {{ __('web.Dealers') }}</p>
                         </a>
                     </div>
                     @endforeach
@@ -51,14 +50,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <span class="subheading">Top Trending Dealers</span>
-                        <h3>Our Popular Online Dealers</h3>
+                        <span class="subheading">{{ __('web.Top Trending Dealers') }}</span>
+                        <h3>{{ __('web.Our Popular Online Dealers') }}</h3>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="course-btn text-lg-right"><a href="{{ route('website.dealers') }}" class="btn btn-main"><i
-                                class="fa fa-store mr-2"></i>All Dealers</a></div>
+                                class="fa fa-store mr-2"></i>{{ __('web.All Dealers') }}</a></div>
                 </div>
             </div>
 
@@ -78,14 +77,14 @@
                 <div class="col-lg-7">
                     <div class="section-heading center-heading">
                         {{-- <span class="subheading"></span> --}}
-                        <h3>Top Trending Dealers</h3>
+                        <h3>{{ __('web.Top Trending categories') }}</h3>
                     </div>
                 </div>
             </div>
 
             <div class="text-center">
                 <ul class="course-filter">
-                    <li class="active"><a href="#" data-filter="*"> All</a></li>
+                    <li class="active"><a href="#" data-filter="*"> {{ __('web.All') }}</a></li>
                     @foreach ($categories as $item)
                     <li><a href="#" data-filter=".cat{{ $item->id }}">{{ $item->trans_name }}</a></li>
                     @endforeach

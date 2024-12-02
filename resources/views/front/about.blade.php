@@ -7,14 +7,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="page-header-content">
-                    <h1>Who we are</h1>
+                    <h1>{{ __('web.Who we are') }}</h1>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="#">Home</a>
+                            <a href="#">{{ __('web.Home') }}</a>
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
-                            About Us
+                            {{ __('web.Who we are') }}
                         </li>
                     </ul>
                 </div>

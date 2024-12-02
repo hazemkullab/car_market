@@ -133,6 +133,18 @@
                                     {{ __('web.Contact') }}
                                 </a>
                             </li>
+                            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                @if (app()->currentLocale() != $localeCode)
+                                    <li class="nav-item ">
+
+                                        <a hreflang="{{ $localeCode }}" class="nav-link"
+                                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            <img width="30" src="{{ asset('flags/' . $properties['flag']) }}"
+                                                alt="" height="20">
+                                        </a>
+                                    </li>
+                                @endif
+                            @endforeach
 
                         </ul>
                         @if (Auth::check())
@@ -140,19 +152,19 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbar3" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Welcom, {{ Auth::user()->name }} <i class="fa fa-angle-down"></i>
+                                        {{ __('web.Welcom') }}, {{ Auth::user()->name }} <i class="fa fa-angle-down"></i>
                                     </a>
                                     @if (Auth::user()->type == 'admin')
                                     <div class="dropdown-menu" aria-labelledby="navbar3">
                                         <a class="dropdown-item " href="{{ route('website.my_products') }}">
-                                            My Products
+                                            {{ __('web.My Products') }}
                                         </a>
                                         <a class="dropdown-item " href="{{ route('admin.categories.index') }}">
-                                            Dashboard
+                                            {{ __('web.Dashboard') }}
                                         </a>
                                         <a class="dropdown-item " href="#"
                                             onclick="event.preventDefault ();document.getElementById('logout-form').submit()">
-                                            Logout
+                                            {{ __('web.Logout') }}
                                         </a>
                                         <form id="logout-form" class="d-none" action="{{ route('logout') }}"
                                             method="POST">
@@ -162,11 +174,11 @@
                                     @else
                                     <div class="dropdown-menu" aria-labelledby="navbar3">
                                         <a class="dropdown-item " href="{{ route('website.my_products') }}">
-                                            My Products
+                                            {{ __('web.My Products') }}
                                         </a>
                                         <a class="dropdown-item " href="#"
                                             onclick="event.preventDefault ();document.getElementById('logout-form').submit()">
-                                            Logout
+                                            {{ __('web.Logout') }}
                                         </a>
                                         <form id="logout-form" class="d-none" action="{{ route('logout') }}"
                                             method="POST">
@@ -224,10 +236,8 @@
             <div class="row">
                 <div class="col-lg-4 mr-auto col-sm-6 col-md-6">
                     <div class="widget footer-widget mb-5 mb-lg-0">
-                        <h5 class="widget-title">About Us</h5>
-                        <p class="mt-3">Veniam Sequi molestias aut necessitatibus optio magni at natus
-                            accusamus.Lorem ipsum dolor sit amet, consectetur adipisicin gelit, sed do eiusmod tempor
-                            incididunt .</p>
+                        <h5 class="widget-title">{{ __('web.About') }}</h5>
+                        <p class="mt-3">{{ __('web.I am Hamza Al-Nakhalah, and this is my graduation site for Al-Quds Open University. It is a site for selling car spare parts') }}</p>
                         <ul class="list-inline footer-socials">
                             <li class="list-inline-item"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ request()->url() }}"><i
@@ -247,11 +257,11 @@
 
                 <div class="col-lg-2 col-sm-6 col-md-6">
                     <div class="footer-widget mb-5 mb-lg-0">
-                        <h5 class="widget-title">Our Website</h5>
+                        <h5 class="widget-title">{{ __('web.Our Website') }}</h5>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="{{ route('website.about') }}">About</a></li>
-                            <li><a href="{{ route('website.contact') }}">Contact us</a></li>
-                            <li><a href="{{ route('website.dealers') }}">Dealers</a></li>
+                            <li><a href="{{ route('website.about') }}">{{ __('web.About') }}</a></li>
+                            <li><a href="{{ route('website.contact') }}">{{ __('web.Contact') }}</a></li>
+                            <li><a href="{{ route('website.dealers') }}">{{ __('web.Dealers') }}</a></li>
                             {{-- <li><a href="#">Terms & Condition</a></li>
                             <li><a href="#">Privacy policy</a></li> --}}
                         </ul>
@@ -271,25 +281,25 @@
                 </div> --}}
                 <div class="col-lg-3 col-sm-6 col-md-6">
                     <div class="footer-widget footer-contact mb-5 mb-lg-0">
-                        <h5 class="widget-title">Contact </h5>
+                        <h5 class="widget-title">{{ __('web.Contact') }} </h5>
 
                         <ul class="list-unstyled">
                             <li><i class="bi bi-headphone"></i>
                                 <div>
-                                    <strong>Phone number</strong>
-                                    (+972)59-515-9513
+                                    <strong>{{ __('web.Phone number') }}</strong>
+                                    (+970)569-600-558
                                 </div>
 
                             </li>
                             <li> <i class="bi bi-envelop"></i>
                                 <div>
-                                    <strong>Email Address</strong>
-                                    hazemdevelopment@gmail.com
+                                    <strong>{{ __('web.Email Address') }}</strong>
+                                    HamzaKh@gmail.com
                                 </div>
                             </li>
                             <li><i class="bi bi-location-pointer"></i>
                                 <div>
-                                    <strong>Office Address</strong>
+                                    <strong>{{ __('web.Office Address') }}</strong>
                                     alnaser street
                                 </div>
                             </li>
@@ -308,7 +318,7 @@
                             {{-- <img src="{{ asset('webasset/assets/images/lww.png') }}" alt="Edutim"
                                 class="img-fluid"> --}}
                             <div class="sidebar-brand-icon rotate-n-15">
-                                <i class="fas fa-car fa-2x"> Cars Market </i>
+                                <i class="fas fa-car fa-2x"> {{ __('web.Cars Market') }} </i>
                                 {{-- <div class="sidebar-brand-text mx-3"> Dental Market </div> --}}
                             </div>
 
@@ -316,7 +326,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="copyright text-lg-center">
-                            <p>@ Copyright reserved to ME  <a
+                            <p>{{ __('web.@ Copyright reserved to dev:Hamza') }}  <a
                                     href="https://themeturn.com"></a> </p>
                         </div>
                     </div>

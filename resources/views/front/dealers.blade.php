@@ -10,14 +10,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="page-header-content">
-                    <h1>{{ $title }}</h1>
+                    <h1>{{ __('web.Dealers') }}</h1>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="{{ route('website.index') }}">Home</a>
+                            <a href="{{ route('website.index') }}">{{ __('web.Home') }}</a>
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
-                            {{ $title }}
+                            {{ __('web.Dealers') }}
                         </li>
                     </ul>
                 </div>

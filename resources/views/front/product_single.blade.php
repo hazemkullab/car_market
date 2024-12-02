@@ -46,12 +46,12 @@
                     <div class="single-course-meta ">
                         <ul>
                             <li>
-                                <span><i class="fa fa-calendar"></i>Last Update :</span>
+                                <span><i class="fa fa-calendar"></i>{{ __('web.Last Update') }} :</span>
                                 <a href="#" class="d-inline-block">{{ $product->updated_at->format('F d,Y') }} </a>
                             </li>
 
                             <li>
-                                <span><i class="fa fa-bookmark"></i>Dealer :</span>
+                                <span><i class="fa fa-bookmark"></i>{{ __('web.Dealer') }} :</span>
                                 <a href="#" class="d-inline-block">{{ $product->dealer->trans_name }}</a>
                             </li>
                         </ul>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="single-course-details ">
-                    <h4 class="course-title">Description</h4>
+                    <h4 class="course-title">{{ __('web.Description') }}</h4>
                     {!! $product->trans_content !!}
 
 
@@ -129,7 +129,7 @@
                         <img src="assets/images/course/course2.jpg" alt="" class="img-fluid w-100">
                         <div class="course-price-wrapper">
                             <div class="course-price ml-3">
-                                <h4>Price: <span>${{ $product->price }}</span></h4>
+                                <h4>{{ __('web.Price') }}: <span>${{ $product->price }}</span></h4>
                             </div>
                             @if (Auth::check())
                                 <div class="buy-btn"><a href="{{ route('website.buy_product',$product->slug) }}" class="btn btn-main btn-block">Buy This Product</a></div>
@@ -147,7 +147,7 @@
 
 
                     <div class="course-widget course-share d-flex justify-content-between align-items-center">
-                        <span>Share</span>
+                        <span>{{ __('web.Share') }}</span>
                         <ul class="social-share list-inline">
                             <li class="list-inline-item"><a href="https://www.facebook.com/sharer/sharer.php?u={{ request()->url() }}"><i class="fab fa-facebook"></i></a></li>
                             <li class="list-inline-item"><a href="https://twitter.com/intent/tweet?url=test.com&text={{ request()->url() }}&text = {{ $product->trans_name }}"><i class="fab fa-twitter"></i></a></li>
@@ -172,7 +172,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h4>Related Cars You may Like</h4>
+                    <h4>{{ __('web.Related products You may Like') }}</h4>
                 </div>
             </div>
         </div>

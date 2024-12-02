@@ -24,7 +24,7 @@
                 <span class="course-duration"><i class="bi bi-badge3"></i>82 Lessons</span> --}}
             </div>
 
-            <div class="buy-btn"><a href="{{ route('website.products_single' , $product->slug) }}" class="btn btn-main-2 btn-small">Buy now</a></div>
+            <div class="buy-btn"><a href="{{ route('website.products_single' , $product->slug) }}" class="btn btn-main-2 btn-small">{{ __('web.Buy now') }}</a></div>
         </div>
     </div>
 </div>

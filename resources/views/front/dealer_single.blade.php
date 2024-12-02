@@ -2,6 +2,8 @@
 @section('title','Homepage | '.env('APP_NAME'))
 @section('content')
 
+
+
 <section class="page-header">
     <div class="container">
         <div class="row justify-content-center">
@@ -45,12 +47,12 @@
                     <div class="single-course-meta ">
                         <ul>
                             <li>
-                                <span><i class="fa fa-calendar"></i>Last Update :</span>
+                                <span><i class="fa fa-calendar"></i>{{ __('web.Last Update') }} :</span>
                                 <a href="#" class="d-inline-block">{{ $dealer->updated_at->format('F d, Y') }} </a>
                             </li>
 
                             <li>
-                                <span><i class="fa fa-bookmark"></i>Category :</span>
+                                <span><i class="fa fa-bookmark"></i>{{ __('web.Category') }} :</span>
                                 <a href="#" class="d-inline-block">{{ $dealer->category->trans_name }}</a>
                             </li>
                         </ul>
@@ -58,7 +60,7 @@
                 </div>
 
                 <div class="single-course-details ">
-                    <h4 class="course-title">Description</h4>
+                    <h4 class="course-title">{{ __('web.Description') }}</h4>
                     {!! $dealer->trans_content !!}
                     </div>
             </div>
@@ -71,17 +73,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <p> All products </p>
+                    <p> {{ __('web.All products') }} </p>
                 </div>
-
+{{-- 
                 <div class="col-lg-4">
                     <div class="topbar-search">
                         <form method="get" action="#">
-                            <input type="text" placeholder="Search our products" class="form-control">
+                            <input type="text" placeholder="{{ __('web.Search our products') }}" class="form-control">
                             <label><i class="fa fa-search"></i></label>
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -118,7 +120,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h4>Related Dealers You may Like</h4>
+                    <h4>{{ __('web.Related Dealers You may Like') }}</h4>
                 </div>
             </div>
         </div>
