@@ -31,7 +31,7 @@
                     <img src="assets/images/bg/choose.png" alt="" class="img-fluid">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12">
+            {{-- <div class="col-lg-6 col-md-12">
                 <div class="section-heading">
                     <span class="subheading">Top Categories</span>
                     <h3>Learn new skills to go ahead for your career</h3>
@@ -43,7 +43,7 @@
 
                 <a href="#" class="btn btn-main"><i class="fa fa-check mr-2"></i>Learn More</a>
 
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -56,8 +56,8 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-7">
                 <div class="section-heading center-heading">
-                    <span class="subheading">Working Partners</span>
-                    <h3>Our valuable Partners</h3>
+                    <span class="subheading">{{ __('web.Working Partners') }}</span>
+                    <h3>{{ __('web.Our valuable Partners') }}</h3>
                 </div>
             </div>
         </div>

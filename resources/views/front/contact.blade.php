@@ -7,14 +7,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="page-header-content">
-                    <h1>Contact Us</h1>
+                    <h1>{{ __('web.Contact') }}</h1>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="#">Home</a>
+                            <a href="#">{{ __('web.Home') }}</a>
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
-                            Contact
+                            {{ __('web.Contact') }}
                         </li>
                     </ul>
                 </div>
@@ -28,10 +28,9 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
                 <div class="section-heading center-heading">
-                    <span class="subheading">Contact Us</span>
-                    <h3>Have any query?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit.</p>
+                    <span class="subheading">{{ __('web.Contact') }}</</span>
+                    <h3>{{ __('web.Have any query?') }}</h3>
+                    <p>{{ __('web.Ask what ever u want') }}</p>
                 </div>
             </div>
         </div>
@@ -41,19 +40,19 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-6">
                         <div class="contact-item">
-                            <p>Email Us</p>
-                            <h4>hazeemdevelopment@gmail.com</h4>
+                            <p>{{ __('web.Email Address') }}</p>
+                            <h4>Hamzakh@gmail.com</h4>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-6">
                         <div class="contact-item">
-                            <p>Make a Call</p>
-                            <h4>+972 59-515-9513</h4>
+                            <p>{{ __('web.Make a Call') }}</p>
+                            <h4>(+970)569-600-558</h4>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-6">
                         <div class="contact-item">
-                            <p>Corporate Office</p>
+                            <p>{{ __('web.Office Address') }}</p>
                             <h4>alnaser street</h4>
                         </div>
                     </div>
@@ -100,7 +99,7 @@
 
                     <div class="col-lg-12">
                         <div class="mt-4 text-right">
-                            <button class="btn btn-main" type="submit">Send Message <i
+                            <button class="btn btn-main" type="submit">{{ __('web.Send Message') }} <i
                                     class="fa fa-angle-right ml-2"></i></button>
                         </div>
                     </div>

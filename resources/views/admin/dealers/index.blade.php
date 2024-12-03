@@ -56,7 +56,6 @@
                                                 <td>{{ $dealer->en_name }}</td>
                                                 <td>{{ $dealer->ar_name }}</td>
                                                 <td>{{ $dealer->category ? $dealer->category->trans_name : '' }}</td>
-                                                <td>{{ $dealer->products>count()}}</td>
                                                 <td><img width="100" class="img-thumbnail" src="{{ asset(('uploads/'.$dealer->image)) }}"></td>
                                                 <td>
 

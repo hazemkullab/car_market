@@ -132,7 +132,7 @@
                                 <h4>{{ __('web.Price') }}: <span>${{ $product->price }}</span></h4>
                             </div>
                             @if (Auth::check())
-                                <div class="buy-btn"><a href="{{ route('website.buy_product',$product->slug) }}" class="btn btn-main btn-block">Buy This Product</a></div>
+                                <div class="buy-btn"><a href="{{ route('website.buy_product',$product->slug) }}" class="btn btn-main btn-block">{{ __('web.Buy This Product') }}</a></div>
                             @else
                             <div class="buy-btn"><a href="{{ route('website.login') }}" class="btn btn-main btn-block">Buy This Product</a></div>
                             @endif

@@ -50,6 +50,15 @@ return
     'Related products You may Like'=>'Related products You may Like',
     'Dealer'=>'Dealer',
     'Price'=>'Price',
+    'Working Partners'=>'Working Partners',
+    'Our valuable Partners'=>'Our valuable Partners',
+    'Have any query?'=>'Have any query?',
+    'Ask what ever u want'=>'Ask what ever u want',
+    'Make a Call'=>'Make a Call',
+    'Send Message'=>'Send Message',
+    'Buy This Product'=>'Buy This Product',
+    'Share'=>'Share',
+
 
 
 ];

@@ -50,6 +50,16 @@ return
     'Related products You may Like'=>'منتجات تابعة لمتجرنا',
     'Dealer'=>'التاجر',
     'Price'=>'السعر',
+    'Working Partners'=>'شركاء عملنا',
+    'Our valuable Partners'=>'شركاؤنا الاعزاء',
+    'Have any query?'=>'هل لديك اي استعلامات؟',
+    'Ask what ever u want'=>'اسال عن اي شيء تريده',
+    'Make a Call'=>'اتصل بنا',
+    'Send Message'=>'ارسل',
+    'Buy This Product'=>'اشتر هذا المنتج',
+    'Share'=>'مشاركة',
+
+
 
 
 

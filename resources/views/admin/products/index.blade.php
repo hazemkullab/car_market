@@ -1,10 +1,10 @@
 @extends('admin.master')
 
-@section('title','All Cars')
+@section('title','All products')
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center">
-    <h1> {{ ($type =='trash')?'Trashed Cars':'All Cars' }} </h1>
+    <h1> {{ ($type =='trash')?'Trashed products':'All products' }} </h1>
 
     <a class="btn btn-outline-success" href="{{ route('admin.products.create') }}">Add New Car</a>
 
@@ -91,7 +91,7 @@
                                             </tr>
                                     @empty
                                             <tr>
-                                                <td colspan="5" style="text-align:center">Theres no Cars </td>
+                                                <td colspan="5" style="text-align:center">Theres no products </td>
                                             </tr>
                                     @endforelse
 {{--

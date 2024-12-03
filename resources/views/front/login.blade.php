@@ -40,7 +40,7 @@
                                 name="email" id="username" autocomplete="username" value="">
                         </p>
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                            <label for="password">{{ __('web.Password') }}&nbsp;<span class="required">*</span></label>
+                            <label for="password">{{ __('web.Password ') }}&nbsp;<span class="required">*</span></label>
                             <input class="woocommerce-Input woocommerce-Input--text input-text form-control"
                                 type="password" name="password" id="password" autocomplete="current-password">
                         </p>
@@ -121,7 +121,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('web.Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('web.Password ') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('web.password') is-invalid @enderror" name="password" required autocomplete="new-password">
