@@ -40,7 +40,7 @@
                         <span>(5.00)</span>
                     </div>
 
-                    <h3 class="single-course-title">I{{ $product->trans_name }}</h3>
+                    <h3 class="single-course-title">{{ $product->trans_name }}</h3>
                     <p>{{ $product->trans_excerpt }}</p>
 
                     <div class="single-course-meta ">
